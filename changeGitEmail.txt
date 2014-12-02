@@ -1,3 +1,8 @@
+FOLLOWING -- https://thinkster.io/angulartutorial/mean-stack-tutorial/
+
+
+
+
 git filter-branch --env-filter '
 
 OLD_EMAIL="zrome@atmosol.com"
