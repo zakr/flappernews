@@ -11,7 +11,7 @@
 	<body ng-app="flapperNews" ng-controller="MainCtrl">
 		
 		<div class="row">
-			<div class="col-md-6 col-md-offset-3">
+			<div class="col-sm-10 col-sm-offset-1">
 				<ui-view></ui-view>
 			</div>
 		</div>
@@ -34,13 +34,18 @@
 				</span>
 			</div>
 		
-			<form ng-submit="addPost()" class="postArea">
-				<input type="text" class="form-control" placeholder="Title" ng-model="title"></input>
-				<br>
-				<input type="text" class="form-control" placeholder="Link" ng-model="link"></input>
-				<br>
-				<button type="submit" class="btn btn-primary">POST</button>
-			</form>
+			<div class="row">
+				<div class="col-sm-6 col-sm-offset-3">
+					<form ng-submit="addPost()" class="postArea">
+						<h3>Post Something</h3>
+						<input type="text" class="form-control" placeholder="Title" ng-model="title"></input>
+						<br>
+						<input type="text" class="form-control" placeholder="Link" ng-model="link"></input>
+						<br>
+						<button type="submit" class="btn btn-primary">POST</button>
+					</form>
+				</div>
+			</div>
 		</script>
 
 		<script type="text/ng-template" id="/posts.html">
@@ -66,13 +71,17 @@
 		    </span>
 		  </div>
 
-		  <form ng-submit="addComment()" class="postArea">
-		  	<h3>Add a new comment</h3>
-		  	<div class="form-group">
-		  		<input type="text" class="form-control" placeholder="Comment" ng-model="body"></input>
-		  	</div>
-		  	<button type="submit" class="btn btn-primary">POST</button>
-		  </form>
+		  <div class="row">
+				<div class="col-sm-6 col-sm-offset-3">
+				  <form ng-submit="addComment()" class="postArea">
+				  	<h3>Add a new comment</h3>
+				  	<div class="form-group">
+				  		<textarea class="form-control" ng-model="body"></textarea>
+				  	</div>
+				  	<button type="submit" class="btn btn-primary">POST</button>
+				  </form>
+				</div>
+			</div>
 		</script>
 	</body>
 </html>
